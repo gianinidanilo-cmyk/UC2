@@ -1,0 +1,80 @@
+Guia de Nivelamento: Git e Terminal (Windows)
+
+Este guia contém os passos necessários para configurar seu ambiente e os comandos básicos utilizados em aula.
+1. Instalação e Identidade
+
+No Terminal do Windows ou PowerShell (como Administrador):
+Instalação do Git via Winget
+
+winget install --id Git.Git -e --source winget
+Configuração de usuário (Executar apenas uma vez)
+
+git config --global user.name "Seu Nome" git config --global user.email "seu-email@exemplo.com"
+2. Comandos de Terminal (Navegação)
+
+Comandos essenciais para manipulação de pastas e arquivos:
+
+    pwd: Exibe o caminho da pasta atual.
+    ls: Lista arquivos da pasta.
+    cd [nome]: Entra em uma pasta.
+    cd ..: Volta para a pasta anterior.
+    mkdir [nome]: Cria uma nova pasta.
+    ni [nome.ext]: Cria um novo arquivo (ex: ni README.md).
+    clear: Limpa a tela.
+
+3. Fluxo Local do Git
+
+Para cada nova UC (Unidade Curricular), o processo de inicialização e salvamento segue esta ordem:
+Inicialização
+
+mkdir UC1 cd UC1 git init
+Ciclo de Trabalho (Repetir sempre que alterar arquivos)
+
+    Verificar estado: git status
+    Preparar arquivos: git add .
+    Salvar versão: git commit -m "Descrição clara do que foi feito"
+    Ver histórico: git log
+
+4. Comandos de Recuperação (Desfazer)
+
+    Desfazer alterações no arquivo: git restore [nome-do-arquivo]
+    Remover arquivo do palco (unstage): git restore --staged [nome-do-arquivo]
+
+5. Estrutura de Pastas Esperada
+
+Para a próxima aula, seu ambiente local deve estar organizado da seguinte forma:
+
+DEV/ ├── UC1/ (repositório git inicializado) ├── UC2/ (repositório git inicializado) └── UC5/ (repositório git inicializado)
+
+Cada pasta deve conter ao menos um arquivo README.md e pelo menos um commit realizado.
+
+
+
+
+Aula 18/05
+
+**seguencia Git 
+
+- Criar branch
+-> git checkout -b + nome da branch
+ 
+- Resolva o ticket.
+
+- Colocar os arquivos no stage
+-> git add + nome do arquivo ou git add .
+
+- commit os arquivos no stage
+-> git commit -m "msg do commit"
+
+- mandar a sua branch para o github
+-> git push -u origin + nomde da branch
+
+- Atualizar o repo
+-> git pull
+
+
+
+----------------------
+
+branch feature/
+
